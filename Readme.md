@@ -5,7 +5,7 @@
 Cloner le projet
 
 ```bash
-git clone #TODO
+git clone https://github.com/tomtaranto/neo4j-prez.git
 ```
 
 #### Création de l'environnement python
