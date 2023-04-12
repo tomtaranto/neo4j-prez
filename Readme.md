@@ -10,11 +10,16 @@ git clone https://github.com/tomtaranto/neo4j-prez.git
 
 #### Création de l'environnement python
 
+
+Lien d'installation de [Poetry](https://python-poetry.org/docs/)
+
 ```bash
 poetry install
 ```
 
 #### Lancement de Neo4j
+
+Lien d'installation de [Docker](https://docs.docker.com/engine/install/)
 
 ```bash
 docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data neo4j
@@ -22,14 +27,14 @@ docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/da
 
 #### Changement du mot de passe Neo4J (requis).
 
-Aller sur l'URL `http://localhost:7474/browser/`, puis dans le formulaire renseigner :
+Aller sur l'URL [http://localhost:7474/browser](http://localhost:7474/browser), puis dans le formulaire renseigner :
 
 - username: `neo4j`
 - password: `neo4j`
 
 Et valider en appuyant sur `connect`. 
 
-Un formulaire de changement de mot de passe va apparaitre, renseigner comme mot de passe: `neo4jneo4j`
+Un formulaire de changement de mot de passe va apparaitre, renseigner comme nouveau mot de passe: `neo4jneo4j`
 
 
 #### Génération de données:
@@ -42,10 +47,10 @@ poetry run python main.py
 Lancer l'image Docker :
 
 ```bash
-docker run --name postgre-trip2 -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -e POSTGRES_USER=postgres -v "$HOME/tmp/postgre:/var/lib/postgresql/data" -d -p 5432:5432 postgres
+docker run --name postgre-trip -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=postgres -e POSTGRES_USER=postgres -v "$HOME/tmp/postgre:/var/lib/postgresql/data" -d -p 5432:5432 postgres
 ```
 
-Pour analyser une requete:
+Pour analyser une requête:
 
 ```bash
 poetry run python compare.py
