@@ -22,7 +22,7 @@ poetry install
 Lien d'installation de [Docker](https://docs.docker.com/engine/install/)
 
 ```bash
-docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data neo4j
+docker run --name neo4j-trip --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data neo4j
 ```
 
 #### Changement du mot de passe Neo4J (requis).
