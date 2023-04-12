@@ -27,7 +27,14 @@ docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/da
 
 #### Changement du mot de passe Neo4J (requis).
 
-Aller sur l'URL [http://localhost:7474/browser](http://localhost:7474/browser), puis dans le formulaire renseigner :
+Aller sur l'URL [http://localhost:7474/browser](http://localhost:7474/browser).
+
+Dans la première cellule executer la commande :
+```cypher
+:server connect
+```
+
+Puis dans le formulaire se connecter en renseignant :
 
 - username: `neo4j`
 - password: `neo4j`
