@@ -19,7 +19,7 @@ def compare():
 
 def compute_nbr_of_trip_from_pau(generator, bdd="neo4j"):
     if bdd == "neo4j":
-        query = "MATCH ()-[:TO]->(c:CITY {city_name:'pau'}) RETURN COUNT(*)"
+        query = "MATCH ()-[:FROM]->(c:CITY {city_name:'pau'}) RETURN COUNT(*)"
         generator.conn.execute_query(query)
     elif bdd == "postgre":
         query = "select COUNT(*) FROM trip t JOIN city c ON t.from_city = c.id WHERE c.city_name LIKE 'pau'"
